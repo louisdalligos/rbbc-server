@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_types",
+  "info": {
+    "name": "listingType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "listings": {
+      "via": "listing_types",
+      "collection": "listing",
+      "dominant": true
+    }
+  }
+}

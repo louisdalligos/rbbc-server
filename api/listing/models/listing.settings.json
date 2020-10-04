@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "name": "listing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 200
+    },
+    "propertyDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "startingPrice": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "floorPlansAndPricing": {
+      "type": "json"
+    },
+    "listing_types": {
+      "collection": "listing-type",
+      "via": "listings"
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "listings",
+      "dominant": true
+    }
+  }
+}
