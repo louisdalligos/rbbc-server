@@ -50,7 +50,8 @@
       "dominant": true
     },
     "slug": {
-      "type": "string"
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
