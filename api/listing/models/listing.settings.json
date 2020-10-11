@@ -48,6 +48,9 @@
       "collection": "tag",
       "via": "listings",
       "dominant": true
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
