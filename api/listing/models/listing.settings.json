@@ -52,6 +52,24 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "bed": {
+      "type": "integer"
+    },
+    "bath": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "yearBuilt": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
     }
   }
 }
