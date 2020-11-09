@@ -1,13 +1,12 @@
 module.exports = ({ env }) => ({
   email: {
-    provider: "mailgun",
+    provider: "sendgrid",
     providerOptions: {
-      apiKey: env("MAILGUN_API_KEY"),
-      domain: env("MAILGUN_DOMAIN"), //Required if you have an account with multiple domains
+      apiKey: env("SENDGRID_API_KEY")
     },
     settings: {
-      defaultFrom: "zindex14@gmail.com",
-      defaultReplyTo: "zindex14@gmail.com",
+      defaultFrom: 'sales@rbbcrealty.com',
+      defaultReplyTo: 'no-reply@rbbcrealty.com',
     },
   },
 });
